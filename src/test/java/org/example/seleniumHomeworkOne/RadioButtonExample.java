@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RadioButtonExample {
-
-    public class RadioButtonExample{
+    public static class radioButtonExample {
 
         WebDriver driver;
         @Before
