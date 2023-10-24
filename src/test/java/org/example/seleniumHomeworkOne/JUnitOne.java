@@ -34,5 +34,6 @@ public class JUnitOne {
 
     @After
     public void closeTest(){
+
         driver.close();
     }}

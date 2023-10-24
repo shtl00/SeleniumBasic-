@@ -32,7 +32,7 @@ public class CheckboxExample {
         Thread.sleep(4000);
         }
     @After
-    public void tesClose(){
+    public void tearDown(){
         driver.close();
     }
 }

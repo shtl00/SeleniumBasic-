@@ -5,9 +5,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class DisabledEnabledExample {
@@ -21,24 +23,29 @@ public class DisabledEnabledExample {
     }
     @Test
     public void disabledTest() throws InterruptedException {
+       Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,350)", "");
        driver.findElement(By.id("disabled-button")).click();
-        Boolean isTexinputDisabled=driver.findElement(By.id("enabled-example-input")).isEnabled();
-        System.out.println(isTexinputDisabled);
+        boolean isTexInputboxEnabled=driver.findElement(By.id("enabled-example-input")).isEnabled();
+        System.out.println(isTexInputboxEnabled);
+        assertFalse(isTexInputboxEnabled);
         Thread.sleep(6000);
     }
     @Test
     public void enabledTest() throws InterruptedException {
+        Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,350)", "");
         driver.findElement(By.id("enabled-button")).click();
-        Boolean isTexinputboxEnabled=driver.findElement(By.id("enabled-example-input")).isEnabled();
-        System.out.println(isTexinputboxEnabled);
+        Boolean isTexinputboxDisabled=driver.findElement(By.id("enabled-example-input")).isEnabled();
+        System.out.println(isTexinputboxDisabled);
         Thread.sleep(6000);
-        assertTrue(isTexinputboxEnabled);
-
-
+        assertTrue(isTexinputboxDisabled);
     }
-
     @After
-    public void tearDown(){
+    public void tearDown()
+    {
         driver.close();
     }
 }
