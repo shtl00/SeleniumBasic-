@@ -7,37 +7,37 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import static org.example.seleniumHomeworkOne.LoginFunactionality.driver;
 public class YouTubeExample {
+
+    WebDriver driver;
     @Before
     public void setUpChrome() {
         WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
     }
 
     @Test
     public void openTestWebsite() throws InterruptedException {
         driver.manage().window().maximize();
         driver.get("https://www.youtube.com/");
+        Thread.sleep(6000);
 
-        driver.findElement(By.xpath("/html/body/ytd-app/ytd-consent-bump-v2-lightbox/tp-yt-paper-dialog/div[4]/div[2]/div[6]/div[1]/ytd-button-renderer[1]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]")).click();//driver.findElement(By.id("search-form")).click();
-        driver.findElement(By.id("search-input")).click();
-        Thread.sleep(2000);
-        Thread.sleep(3000);
+        driver.findElement(By.xpath("//*[@id=\"content\"]/div[2]/div[6]/div[1]/ytd-button-renderer[2]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]")).click();
+Thread.sleep(10000);
+
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,350)", "");
 
-        driver.findElement(By.xpath("//input[@id=\"search\"]")).sendKeys("Dhuni re dhakhavi");
-        driver.findElement(By.id("search-icon-legacy")).click();
+        driver.findElement(By.id("search")).sendKeys("kumkum na pagala padya");
+        Thread.sleep(7000);
+        driver.findElement(By.xpath("//*[@id=\"search-icon-legacy\"]/yt-icon/yt-icon-shape/icon-shape/div")).click();
 
-        Thread.sleep(5000);
-        driver.findElement(By.xpath("//a[@title=\"Dhuni Re Dhakhavi | Sachin-Jigar| Sachin Sanghvi | Nishant Thacker\"]")).click();
-        Thread.sleep(10000);
     }
-    @After
-    public void testClose(){
-        driver.close();
-    }
-}
+  @After
+   public void testClose(){
+      driver.close();
+    }}

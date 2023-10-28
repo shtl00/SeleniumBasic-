@@ -27,8 +27,9 @@ public class DisplayedExample {
         Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,350)", "");
+
         driver.findElement(By.id("show-textbox")).click();
-        Boolean isDisplayed=driver.findElement(By.id("displayed-text")).isDisplayed();
+        boolean isDisplayed=driver.findElement(By.id("displayed-text")).isDisplayed();
         System.out.println(isDisplayed);
         assertTrue(isDisplayed);
         driver.findElement(By.id("displayed-text")).sendKeys("sheetal");
@@ -39,8 +40,9 @@ public class DisplayedExample {
         Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,350)", "");
+
         driver.findElement(By.id("hide-textbox")).click();
-        Boolean isNotDisplayed=driver.findElement(By.id("displayed-text")).isDisplayed();
+        boolean isNotDisplayed=driver.findElement(By.id("displayed-text")).isDisplayed();
         System.out.println(isNotDisplayed);
         assertFalse(isNotDisplayed);
         Thread.sleep(5000);
@@ -48,4 +50,5 @@ public class DisplayedExample {
     @After
     public void tearDown(){
         driver.close();
-    }}
+    }
+}

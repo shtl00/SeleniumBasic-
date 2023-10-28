@@ -23,7 +23,7 @@ public class CheckboxExample {
     public void checkboxTest() throws InterruptedException {
 
         driver.findElement(By.id("bmwcheck")).click();
-        Boolean isBMWSelected=driver.findElement(By.id("bmwcheck")).isSelected();
+        boolean isBMWSelected=driver.findElement(By.id("bmwcheck")).isSelected();
         System.out.println(isBMWSelected);
         assertTrue(isBMWSelected);
         Thread.sleep(4000);

@@ -26,6 +26,7 @@ public class DisabledEnabledExample {
        Thread.sleep(3000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,350)", "");
+
        driver.findElement(By.id("disabled-button")).click();
         boolean isTexInputboxEnabled=driver.findElement(By.id("enabled-example-input")).isEnabled();
         System.out.println(isTexInputboxEnabled);
@@ -42,6 +43,17 @@ public class DisabledEnabledExample {
         System.out.println(isTexinputboxDisabled);
         Thread.sleep(6000);
         assertTrue(isTexinputboxDisabled);
+    }
+
+@Test
+    public void enabledPractice() throws InterruptedException {
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0,350)", "");
+    Thread.sleep(3000);
+        driver.findElement(By.id("enabled-button")).click();
+      driver.findElement(By.id("enabled-example-input")).isEnabled();
+      driver.findElement(By.id("enabled-example-input")).sendKeys("sheetal");
+      Thread.sleep(3000);
     }
     @After
     public void tearDown()
