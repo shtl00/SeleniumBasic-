@@ -21,76 +21,26 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>3.14.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>5.5.0</version>
-    </dependency>
       <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+          <version>3.14.0</version>
       </dependency>
       <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
-      </dependency>
-      <dependency>
-          <groupId>com.github.bigwheel</groupId>
-          <artifactId>scalatest-structured-before_2.12</artifactId>
-          <version>1.0.1</version>
+          <groupId>io.github.bonigarcia</groupId>
+          <artifactId>webdrivermanager</artifactId>
+          <version>5.5.0</version>
       </dependency>
       <dependency>
           <groupId>junit</groupId>
           <artifactId>junit</artifactId>
-          <version>RELEASE</version>
+          <version>4.13.2</version>
           <scope>test</scope>
       </dependency>
       <dependency>
-          <groupId>re-action</groupId>
-          <artifactId>re-action</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>re-action</groupId>
-          <artifactId>re-action</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>re-action</groupId>
-          <artifactId>re-action</artifactId>
-          <version>0.1.0</version>
-      </dependency>
-      <dependency>
-          <groupId>org.junit.jupiter</groupId>
-          <artifactId>junit-jupiter</artifactId>
-          <version>RELEASE</version>
+          <groupId>org.scala-lang</groupId>
+          <artifactId>scala-library</artifactId>
+          <version>2.12.6</version>
           <scope>test</scope>
       </dependency>
   </dependencies>
